@@ -12,6 +12,10 @@
 
   <title>Hello, world!</title>
   <style>
+    * {
+      transition: 0.5s;
+    }
+
     .bg {
       background: url(https://picsum.photos/1920/1080/?random=10);
       background-repeat: no-repeat;
@@ -25,14 +29,6 @@
       overflow: auto;
     }
 
-    .row {
-      width: 3000px;
-      height: 800px;
-      position: absolute;
-      flex-wrap: nowrap;
-
-    }
-
     .fs-5 {
       border: 2px solid white;
       color: white;
@@ -40,16 +36,48 @@
 
     }
 
-
-    .col-md-auto {
-      flex-basis: 500px;
-    }
-
     .scroll {
-      font-size: 5rem;
-      margin: auto;
+      font-size: 3rem;
       color: white;
       text-shadow: 0.1em 0.1em 0.2em black;
+      /* border: 2px solid white; */
+      padding-top: 10%;
+
+    }
+
+
+
+    @media (min-width:768px) {
+
+
+      .row {
+        width: 3000px;
+        height: 500px;
+        /* position: absolute; */
+        flex-wrap: nowrap;
+        padding: 0px 200px;
+      }
+
+      .fs-5 {
+        border: 2px solid white;
+        color: white;
+        text-shadow: 0.1em 0.1em 0.2em black;
+
+      }
+
+
+      .col-md-auto {
+        flex-basis: 200px;
+      }
+
+      .scroll {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 0.1em 0.1em 0.2em black;
+        /* border: 2px solid white; */
+        padding-top: 10%;
+
+      }
     }
   </style>
 </head>
@@ -57,9 +85,9 @@
 <body>
 
   <div class="bg container-fluid d-flex">
-    <div class=" row">
-      <div class="col-md-auto scroll ">SCROLL</div>
-      <div class="col-md-auto fs-5 shadow-sm">backdrop-filter: none</div>
+    <div class=" row ">
+      <div class="col-md-auto scroll  ">SCROLL</div>
+      <div class="col-md-auto fs-5 shadow-sm ">backdrop-filter: none</div>
       <div class="col-md-auto fs-5 shadow-sm" style="backdrop-filter: grayscale(1);">backdrop-filter: grayscale(1)
       </div>
       <div class="col-md-auto fs-5 shadow-sm" style="backdrop-filter: brightness(1.5)">backdrop-filter:
